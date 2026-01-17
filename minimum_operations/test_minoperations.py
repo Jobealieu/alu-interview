@@ -25,13 +25,13 @@ all_passed = True
 
 for n, expected in test_cases:
     result = minOperations(n)
-    status = "✅ PASS" if result == expected else "❌ FAIL"
-    print(f"{status}: n={n}, expected={expected}, got={result}")
+    status = "PASS" if result == expected else "FAIL"
+    print("{}: n={}, expected={}, got={}".format(status, n, expected, result))
     if result != expected:
         all_passed = False
 
 print()
 if all_passed:
-    print("🎉 All tests passed!")
+    print("All tests passed!")
 else:
-    print("❌ Some tests failed!")
+    print("Some tests failed!")
